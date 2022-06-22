@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.schoolmanagement'
+group = 'com.paymentmanagement'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -44,6 +44,8 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '2.6.4'
     // https://mvnrepository.com/artifact/commons-codec/commons-codec
     implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+
+
 
 }
 
