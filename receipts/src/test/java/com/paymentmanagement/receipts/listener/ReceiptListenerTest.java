@@ -1,7 +1,7 @@
-package com.schoolmanagement.receipts.listener;
+package com.paymentmanagement.receipts.listener;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.schoolmanagement.receipts.service.ReceiptsService;
+import com.paymentmanagement.receipts.service.ReceiptsService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

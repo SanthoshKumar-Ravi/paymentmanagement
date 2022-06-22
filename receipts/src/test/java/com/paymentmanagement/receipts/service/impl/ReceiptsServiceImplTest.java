@@ -1,10 +1,10 @@
-package com.schoolmanagement.receipts.service.impl;
+package com.paymentmanagement.receipts.service.impl;
 
-import com.schoolmanagement.receipts.entity.Receipts;
-import com.schoolmanagement.receipts.exception.ReceiptsException;
-import com.schoolmanagement.receipts.repository.ReceiptsRepository;
-import com.schoolmanagement.receipts.schemaobject.PaymentResponseObject;
-import com.schoolmanagement.receipts.schemaobject.ReceiptsSo;
+import com.paymentmanagement.receipts.entity.Receipts;
+import com.paymentmanagement.receipts.exception.ReceiptsException;
+import com.paymentmanagement.receipts.repository.ReceiptsRepository;
+import com.paymentmanagement.receipts.schemaobject.PaymentResponseObject;
+import com.paymentmanagement.receipts.schemaobject.ReceiptsSo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

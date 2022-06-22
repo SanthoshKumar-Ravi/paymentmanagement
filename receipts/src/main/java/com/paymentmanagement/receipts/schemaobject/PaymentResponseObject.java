@@ -1,24 +1,26 @@
-package com.schoolmanagement.receipts.schemaobject;
+package com.paymentmanagement.receipts.schemaobject;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
 @Builder
-public class ReceiptsSo {
-    private Long receiptsId;
+public class PaymentResponseObject {
+    private String paymentReferenceNo;
+    private String dateOfPayment;
+    private Long paidAmount;
+    private Long balance;
     private String studentId;
     private String studentName;
     private String grade;
+    private String mobileNumber;
     private String schoolName;
     private Long totalFees;
     private Long feesPaid;
-    private Long balance;
     private String cardNumber;
     private String cardType;
-    private String dateOfPayment;
     private String transactionId;
     private String studentUniqueId;
 }

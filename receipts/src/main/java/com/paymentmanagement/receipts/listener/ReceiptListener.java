@@ -1,9 +1,9 @@
-package com.schoolmanagement.receipts.listener;
+package com.paymentmanagement.receipts.listener;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.schoolmanagement.receipts.schemaobject.PaymentResponseObject;
-import com.schoolmanagement.receipts.service.ReceiptsService;
+import com.paymentmanagement.receipts.schemaobject.PaymentResponseObject;
+import com.paymentmanagement.receipts.service.ReceiptsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

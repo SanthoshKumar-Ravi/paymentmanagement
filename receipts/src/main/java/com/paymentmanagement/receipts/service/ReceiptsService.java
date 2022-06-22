@@ -1,7 +1,7 @@
-package com.schoolmanagement.receipts.service;
+package com.paymentmanagement.receipts.service;
 
-import com.schoolmanagement.receipts.schemaobject.PaymentResponseObject;
-import com.schoolmanagement.receipts.schemaobject.ReceiptsSo;
+import com.paymentmanagement.receipts.schemaobject.PaymentResponseObject;
+import com.paymentmanagement.receipts.schemaobject.ReceiptsSo;
 
 import java.util.List;
 

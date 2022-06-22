@@ -1,6 +1,6 @@
-package com.schoolmanagement.receipts.repository;
+package com.paymentmanagement.receipts.repository;
 
-import com.schoolmanagement.receipts.entity.Receipts;
+import com.paymentmanagement.receipts.entity.Receipts;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.schoolmanagement.receipts.entity;
+package com.paymentmanagement.receipts.entity;
 
 import lombok.*;
 
