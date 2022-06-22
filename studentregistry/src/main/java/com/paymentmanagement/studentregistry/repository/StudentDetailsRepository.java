@@ -1,6 +1,6 @@
-package com.schoolmanagement.studentregistry.repository;
+package com.paymentmanagement.studentregistry.repository;
 
-import com.schoolmanagement.studentregistry.entity.StudentDetails;
+import com.paymentmanagement.studentregistry.entity.StudentDetails;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

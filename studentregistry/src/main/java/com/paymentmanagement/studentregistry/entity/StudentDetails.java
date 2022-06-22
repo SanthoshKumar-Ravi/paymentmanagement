@@ -1,4 +1,4 @@
-package com.schoolmanagement.studentregistry.entity;
+package com.paymentmanagement.studentregistry.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

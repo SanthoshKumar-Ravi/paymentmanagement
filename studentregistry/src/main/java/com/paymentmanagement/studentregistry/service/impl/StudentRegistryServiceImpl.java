@@ -1,15 +1,15 @@
-package com.schoolmanagement.studentregistry.service.impl;
+package com.paymentmanagement.studentregistry.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.schoolmanagement.studentregistry.entity.StudentDetails;
-import com.schoolmanagement.studentregistry.exception.StudentRegistryException;
-import com.schoolmanagement.studentregistry.repository.StudentDetailsRepository;
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsReponseObject;
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
-import com.schoolmanagement.studentregistry.service.StudentRegistryService;
-import com.schoolmanagement.studentregistry.utils.Utility;
-import com.schoolmanagement.studentregistry.validation.BasicDataValidation;
+import com.paymentmanagement.studentregistry.validation.BasicDataValidation;
+import com.paymentmanagement.studentregistry.entity.StudentDetails;
+import com.paymentmanagement.studentregistry.exception.StudentRegistryException;
+import com.paymentmanagement.studentregistry.repository.StudentDetailsRepository;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsReponseObject;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
+import com.paymentmanagement.studentregistry.service.StudentRegistryService;
+import com.paymentmanagement.studentregistry.utils.Utility;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;

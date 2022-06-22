@@ -1,4 +1,4 @@
-package com.schoolmanagement.studentregistry.schemaobjects;
+package com.paymentmanagement.studentregistry.schemaobjects;
 
 import lombok.*;
 

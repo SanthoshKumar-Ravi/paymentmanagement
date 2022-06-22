@@ -1,10 +1,10 @@
-package com.schoolmanagement.studentregistry.service.impl;
+package com.paymentmanagement.studentregistry.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.schoolmanagement.studentregistry.entity.StudentDetails;
-import com.schoolmanagement.studentregistry.repository.StudentDetailsRepository;
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
-import com.schoolmanagement.studentregistry.validation.BasicDataValidation;
+import com.paymentmanagement.studentregistry.entity.StudentDetails;
+import com.paymentmanagement.studentregistry.repository.StudentDetailsRepository;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
+import com.paymentmanagement.studentregistry.validation.BasicDataValidation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

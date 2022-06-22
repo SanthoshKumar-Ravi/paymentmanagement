@@ -1,4 +1,4 @@
-package com.schoolmanagement.studentregistry.exception;
+package com.paymentmanagement.studentregistry.exception;
 
 import lombok.Data;
 import org.springframework.validation.Errors;

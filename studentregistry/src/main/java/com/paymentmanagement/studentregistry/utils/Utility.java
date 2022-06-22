@@ -1,6 +1,6 @@
-package com.schoolmanagement.studentregistry.utils;
+package com.paymentmanagement.studentregistry.utils;
 
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
 
 public class Utility {
     public static String generateId(StudentDetailsSchemaObject studentDetailsSchemaObject){

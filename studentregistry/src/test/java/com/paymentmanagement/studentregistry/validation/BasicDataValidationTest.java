@@ -1,7 +1,7 @@
-package com.schoolmanagement.studentregistry.validation;
+package com.paymentmanagement.studentregistry.validation;
 
-import com.schoolmanagement.studentregistry.exception.StudentRegistryException;
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
+import com.paymentmanagement.studentregistry.exception.StudentRegistryException;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

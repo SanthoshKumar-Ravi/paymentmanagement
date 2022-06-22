@@ -1,7 +1,7 @@
-package com.schoolmanagement.studentregistry.validation;
+package com.paymentmanagement.studentregistry.validation;
 
-import com.schoolmanagement.studentregistry.exception.StudentRegistryException;
-import com.schoolmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
+import com.paymentmanagement.studentregistry.exception.StudentRegistryException;
+import com.paymentmanagement.studentregistry.schemaobjects.StudentDetailsSchemaObject;
 import org.h2.util.StringUtils;
 import org.springframework.stereotype.Component;
 
