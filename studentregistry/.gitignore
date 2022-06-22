@@ -1,0 +1,15 @@
+.gradle
+.class
+/build
+.classpath
+.project
+.metadata
+.settings
+.factorypath
+.recommenders
+bin
+build
+lib/
+*.log
+*.log*
+*.out
