@@ -19,7 +19,7 @@ This service is used to fetch the receipts details.
 * Build Tool -  gradle
 
 ### Application description:
-The application mainly starts with studentregistry service. It will has a rest API to add student into the database and give the response with studentUniqueId(Important filed through out the application). once the student added it send a message to payment service via activemq. The basic details for a student is already available in payment database. if the user try to pay the fees by providing the enough information then the details will be stored for the corresponding student unique id. We can take the receipts by invoking receipts service.
+The application mainly starts with studentregistry service. It will has a rest API to add student into the database and give the response with studentUniqueId(Important filed through out the application). once the student added it send a message to payment service via activemq. The basic details for a student is already available in payment database. if the user try to pay the fees by providing the enough information then the details will be stored for the corresponding student unique id. We can take the receipts by invoking receipts service.This project has cache mechanism where it will cache the receipts to avoid DB load. 
 
 
 
@@ -31,4 +31,5 @@ The application mainly starts with studentregistry service. It will has a rest A
 
 
 
-![image](https://user-images.githubusercontent.com/18610774/175253715-817c85fc-4d4d-4b2b-905e-43128a759e3c.png)
+![image](https://user-images.githubusercontent.com/18610774/175254228-cf56147c-65e6-40e9-b63c-d9cffb928811.png)
+
