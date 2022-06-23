@@ -18,3 +18,7 @@ server:
 error:
   include-message: always
   include-binding-errors: always
+
+cache:
+  size: 50
+  duration: 60

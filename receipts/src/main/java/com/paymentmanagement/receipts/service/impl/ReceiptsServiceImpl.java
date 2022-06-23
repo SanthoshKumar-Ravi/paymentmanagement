@@ -1,14 +1,16 @@
 package com.paymentmanagement.receipts.service.impl;
 
 import com.paymentmanagement.receipts.entity.Receipts;
-import com.paymentmanagement.receipts.schemaobject.PaymentResponseObject;
-import com.paymentmanagement.receipts.schemaobject.ReceiptsSo;
 import com.paymentmanagement.receipts.exception.ReceiptsException;
 import com.paymentmanagement.receipts.repository.ReceiptsRepository;
+import com.paymentmanagement.receipts.schemaobject.PaymentResponseObject;
+import com.paymentmanagement.receipts.schemaobject.ReceiptsSo;
 import com.paymentmanagement.receipts.service.ReceiptsService;
+import com.paymentmanagement.receipts.utility.CacheUtility;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -20,20 +22,36 @@ import java.util.List;
 @Slf4j
 public class ReceiptsServiceImpl implements ReceiptsService {
     private final ReceiptsRepository receiptsRepository;
+    private CacheUtility<List<ReceiptsSo>> receiptsSoCacheUtility;
+    @Value("${cache.size}")
+    private Integer size;
+    @Value("${cache.duration}")
+    private Integer duration;
 
     @Override
     public List<ReceiptsSo> getReceipts(String studentUniqueId) {
-        List<Receipts> receipts = receiptsRepository.findByStudentUniqueId(studentUniqueId);
-        List<ReceiptsSo> receiptsSos = new ArrayList<>();
-        if(!CollectionUtils.isEmpty(receipts)) {
-            for (Receipts receipts1 : receipts) {
-                ReceiptsSo receiptsSo = new ReceiptsSo();
-                BeanUtils.copyProperties(receipts1, receiptsSo);
-                receiptsSos.add(receiptsSo);
-            }
-        }else{
-            throw new ReceiptsException("ERR_EMPTY_RECEIPTS","No Receipts available");
+        List<ReceiptsSo> receiptsSos;
+        if(receiptsSoCacheUtility==null) {
+            receiptsSoCacheUtility = new CacheUtility(size, duration);
         }
+        receiptsSos = receiptsSoCacheUtility.get(studentUniqueId);
+        if(!CollectionUtils.isEmpty(receiptsSos)){
+            log.info("key present in cache {}",studentUniqueId);
+            return receiptsSos;
+        }else{
+            List<Receipts> receipts = receiptsRepository.findByStudentUniqueId(studentUniqueId);
+            receiptsSos = new ArrayList<>();
+            if(!CollectionUtils.isEmpty(receipts)) {
+                for (Receipts receipts1 : receipts) {
+                    ReceiptsSo receiptsSo = new ReceiptsSo();
+                    BeanUtils.copyProperties(receipts1, receiptsSo);
+                    receiptsSos.add(receiptsSo);
+                }
+            }else{
+                throw new ReceiptsException("ERR_EMPTY_RECEIPTS","No Receipts available");
+            }
+        }
+        receiptsSoCacheUtility.add(studentUniqueId,receiptsSos);
         return receiptsSos;
     }
 
@@ -42,7 +60,7 @@ public class ReceiptsServiceImpl implements ReceiptsService {
         Receipts receipts = new Receipts();
         BeanUtils.copyProperties(paymentResponseObject,receipts);
         log.info("Adding Details to receipts {}", receipts.toString());
-        Receipts receiptsReturn = receiptsRepository.save(receipts);
+        receiptsRepository.save(receipts);
         log.info("Successfully added receipts");
     }
 }
