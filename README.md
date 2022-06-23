@@ -29,7 +29,7 @@ The application mainly starts with studentregistry service. It will has a rest A
 | payment         | http://localhost:8083/swagger-ui.html         | http://localhost:8083/h2-console/login.jsp   |
 | receipts         | http://localhost:8085/swagger-ui.html         | http://localhost:8085/h2-console/login.jsp   |
 
-
+h2 database username and passowrd are present in the yml file.
 
 ![image](https://user-images.githubusercontent.com/18610774/175254228-cf56147c-65e6-40e9-b63c-d9cffb928811.png)
 
